@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: yellowgreen;
+}
+
+
+
+body .id_mid{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root h1{
+    display:none;
+}

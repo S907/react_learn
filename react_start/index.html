@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="id_mid">
+    <div id="root"></div>
+    <div id="into"></div>
+</div>
+    <script type="text/babel">
+        // Basic Dom operations------------------------
+        // let ele = document.createElement('h1');
+        // ele.innerHTML='Hel----OOOO';
+        // let root= document.getElementById('root');
+        // root.appendChild(ele);
+        //----------------------------------------------
+
+
+        //In React------------------------------
+
+
+        // let root= document.getElementById('root');
+        // let ele= React.createElement('h1',{
+        //         children:['HEL-------00000']
+        // });
+
+        // let ele_react= React.createElement('p',{
+        //         children:['BATMAN', 'SUPERMAN']
+        // });
+
+        
+        // root.appendChild(ele);
+        // console.log(ele);
+
+        //As it is React
+        // console.log(ele);
+        // ReactDOM.render(ele,root);
+        //ReactDOM.render(ele_react,into);
+
+        //--------------------------------------
+
+
+
+        //Using JSX-----------------------------
+
+        // function Element(){
+        //     return(
+                
+        //     <h1>Guns & Roses</h1>
+          
+        //     )
+        // }
+
+        // function Element_one(){
+        //     return(
+        //         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nam?</p>
+        //     )
+        // }
+        
+        // ReactDOM.render(<Element/>,
+        // document.getElementById('root'));
+
+        // ReactDOM.render(<Element_one/>,
+        // document.getElementById('into'));
+
+
+        //Reusabiltity of React------------------
+
+        function Element(){
+            return(
+                <h1>&#11093;Guns And Roses With Cheese&#11093;</h1>
+            )
+        }
+
+        function Element_one(){
+            return(
+                <React.Fragment>
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+                </React.Fragment>
+            )
+
+        }
+
+
+        ReactDOM.render(<Element/>,
+        document.getElementById('root'));
+        
+        ReactDOM.render(<Element_one/>,
+        document.getElementById('into'));
+        
+
+
+
+
+    </script>
+
+</body >
+</html >
