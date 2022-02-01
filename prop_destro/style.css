@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(10, 93, 114);
+    
+}
+
+
+
+body .id_mid{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#into{
+    border:5px solid rgb(238, 78, 30);
+    border-radius: 50px 20px;
+}
+
+#into p{
+    color:#fcfcfe;
+    padding: 1em;
+    font-size: 2em;
+  
+}

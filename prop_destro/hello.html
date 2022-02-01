@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="id_mid">
+    <div id="root"></div>
+    <div id="into"></div>
+</div>
+    <script type="text/babel">
+        
+    //Reusabiltity of React------------------------------
+
+        // function Element(){
+        //     return(
+        //         <h1>&#11093;Guns And Roses With Cheese&#11093;</h1>
+        //     )
+        // }
+
+        // function Element_one(){
+        //     return(
+        //         <React.Fragment>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         </React.Fragment>
+        //     )
+
+        // }
+
+
+        // ReactDOM.render(<Element/>,
+        // document.getElementById('root'));
+        
+        // ReactDOM.render(<Element_one/>,
+        // document.getElementById('into'));
+        // the above one is overwritten 
+        //----------------------------------------------
+
+
+
+        
+        // Passing props inside the function from another--------------
+
+        // function Element(props){
+        //     console.log(props);
+        //     return(
+                
+        //         <h1>{props} will have &#11093;Ham Sandwich With Cheese&#11093;</h1>
+
+        //         // This is an incorrect way so destructuring is needed
+                
+        //     )
+        // }
+
+        // function Element_one(){
+        //     return(
+        //         <React.Fragment>
+        //         <Element name='Axel Rose'/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         </React.Fragment>
+        //     )
+
+        // }
+        // ReactDOM.render(<Element_one/>,
+        // document.getElementById('into'));
+
+
+        // Props destructuring------------------------------
+
+        // In this process name property is passed to the first h1 element via destructuring 
+        // the other h1 elemnt will return an undefined so a default value is passed in the next code example
+
+        //---------------------------------------------------
+
+        // function Element({name}){
+        //     console.log(name);
+        //     return(
+                
+        //         <h1>{name} Will have a &#11093;Ham Sandwich With Cheese&#11093;</h1>
+
+                
+        //     )
+        // }
+
+        // function Element_one(){
+        //     return(
+        //         <React.Fragment>
+        //         <Element name='Axel Rose'/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         <Element/>
+        //         </React.Fragment>
+        //     )
+
+        // }
+
+        // ReactDOM.render(<Element_one/>,
+        // document.getElementById('into'));
+
+
+        //----------------------------------------------------------------------------
+
+        function Element({name='default', place='London'}){
+            console.log(name);
+            return(
+                <div>
+                <p>{name} Will have a &#11093;Enjambment that "tend[s] to increase the pace of the poem" &#11093;</p>
+                <p>{place} The Place Where It Stands</p>
+                </div>
+                
+            )
+        }
+
+        function Element_one(){
+            return(
+                <React.Fragment>
+                <Element name='Axel Rose' place='Kolkata'/>
+                <Element/>
+                <Element/>
+                <Element/>
+                <Element/>
+                </React.Fragment>
+            )
+
+        }
+
+        ReactDOM.render(<Element_one/>,
+        document.getElementById('into'));
+
+
+
+    </script>
+
+</body >
+</html >
